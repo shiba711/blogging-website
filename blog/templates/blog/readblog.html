@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<a href="/blog/allblogs">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqOekISYHg2YrJWrPKwM1vL3oVDAXDeP4O-A&usqp=CAU" style="height:40px ; width:50px">
+</a>
+
+<h3> {{blog.title}}</h3>
+
+<p> {{blog.time_stamp}}</p>
+
+<img src="{{blog.thumbnail}}" style="height:150px ; width: 300px"/>
+
+<p>{{blog.body}}</p>
+
+<p>Reads: {{blog.read}}</p>
+
+
+
+{% endblock %}

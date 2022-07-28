@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+<h3>All Blogs are here</h3>
+
+
+
+<div class="container" style=" width: 33.33%; padding: 5px;">
+  <li style="float:left">
+    <tr>
+    {%for blog in allblogs%}
+
+    <div class="card" style="width:18rem; mardin:10px; display:">
+        <img src={{blog.thumbnail}} class="card-img-top"  style="height:150px ; width: 300px">
+        <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">Posted on {{blog.time_stamp}}</p>
+        <a href="/blog/read/{{blog.id}}/" class="btn btn-primary">Read</a>
+        </div>
+    </div>
+</tr>
+</li>
+    {%endfor%}
+</div>
+{% endblock  %}
